@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع الأفلام</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap)" rel="stylesheet">
+</head>
+<body>
+
+  <!-- شريط علوي -->
+  <header class="topbar">
+    <div class="nav-left">
+
+<button id="loginBtn" class="login-btn">
+تسجيل الدخول
+</button>
+
+<button id="logoutBtn" class="login-btn" style="display:none;">
+تسجيل خروج
+</button>
+
+</div>
+    <nav class="nav-right">
+  <a href="#" id="searchLink">البحث</a>
+  <a href="#" id="offersLink">العروض</a>
+  <a href="#" id="branchesLink">فروعنا</a>
+</nav>
+  </header>
+
+  <!-- الخلفية الزرقاء البنفسجية -->
+  <section class="hero">
+    <img src="images/logo.png" alt="شعار الموقع" class="main-logo">
+    <p class="hero-text">كل أفلام الرسوم المتحركة في مكان واحد 🎞️</p>
+  </section>
+
+  <!-- فلاتر و بحث -->
+  <section class="filters">
+    <label for="category">التصنيف:</label>
+    <select id="category" onchange="applyFilters()">
+      <option value="all">الكل</option>
+      <option value="adventure">مغامرات (Adventure)</option>
+      <option value="comedy">كوميديا (Comedy)</option>
+      <option value="fantasy">خيال / فانتازيا (Fantasy)</option>
+      <option value="animals">حيوانات (Animal Movies)</option>
+    </select>
+
+    <label for="status">الحالة:</label>
+    <select id="status" onchange="applyFilters()">
+      <option value="all">الكل</option>
+      <option value="now">يعرض الآن</option>
+      <option value="soon">قريباً</option>
+    </select>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="ابحث عن فيلم..." oninput="searchMovies()">
+    </div>
+  </section>
+
+  <!-- شبكة الأفلام -->
+  <main class="movies" id="movieContainer"></main>
+
+  <!-- فوتر -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>معلومات</h3>
+        <a href="#">حجز صالة سينما</a>
+        <a href="#">الشروط والأحكام</a>
+        <a href="#">سياسة الخصوصية</a>
+      </div>
+
+      <div>
+        <h3>روابط مفيدة</h3>
+        <a href="branches.html">فروعنا</a>
+        <a href="#">تواصل معنا</a>
+        <a href="offers.html">العروض</a>
+      </div>
+
+      <div>
+        <h3>تابعنا</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 | جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
